@@ -26,16 +26,17 @@
     <aside id="main-side-bar">
       <!-- Area del Logo -->
       <section id="aside_logo">
-        <img src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.jpg" alt="Logo principale di spotify">
+        <img class="big-logo" src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.jpg" alt="Logo principale di spotify">
+        <img class="small-logo" src="img/small-logo.png" alt="Logo principale di spotify">
       </section>
       <!-- /Area del Logo -->
 
       <!-- Nav con lista comandi primari -->
       <nav id="main_nav">
         <ul class="command_list">
-          <li><a class="text-white" href="">Home</a></li>
-          <li><a href="">Cerca</a></li>
-          <li><a href="">La tua libreria</a></li>
+          <li><a class="text-white" href=""><i class="fas fa-home"></i><span class="hidden-nav"> Home</span></a></li>
+          <li><a href=""><i class="fas fa-search"></i><span class="hidden-nav"> Cerca</span></a></li>
+          <li><a href=""><i class="fas fa-book-open"></i><span class="hidden-nav"> La tua libreria</span></a></li>
         </ul>
       </nav>
       <!-- /Nav con lista comandi primari-->
@@ -45,7 +46,7 @@
         <h4 class="playlist_title">PLAYLIST</h4>
         <div class="new-playlist flex">
           <div class="add"><button class="btn square">+</button></div>
-          <div class="create"><a href="#">Crea playlist</a>></div>
+          <div class="create"><a href="#">Crea playlist</a></div>
         </div>
       </section>
       <!-- /Sezione Nuova playlist  -->
@@ -68,11 +69,11 @@
 
         <!-- Sezione Profilo e Install App -->
       <section id="profile-side">
-        <a href="">Installa app</a>
-        <hr>
+        <a class="hidden-nav" href="">Installa app</a>
+        <hr class="hidden-nav">
         <div class="profile-reminder flex">
           <img class="profile-pic" src="https://via.placeholder.com/35x35" alt="immagine del profilo">
-          <h5 class="profile-name text-white">John Doe</h5>
+          <h5 class="profile-name text-white hidden-nav">John Doe</h5>
         </div>
       </section>
       <!-- /Sezione Profilo e Install App -->
@@ -82,7 +83,7 @@
 
     <!-- Sezione primaria con album e brani scrollabili -->
     <section id="main-scroll-container">
-      <nav class="top-nav flex">
+      <nav class="top-nav">
         <ul class="top-nav-list flex">
           <li id="selected"><a href="">IN EVIDENZA</a></li>
           <li><a href="">PODCAST</a></li>

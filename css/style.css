@@ -111,10 +111,14 @@ footer{
 
 /* logo */
 
-#aside_logo > img{
+.big-logo{
   height: 40px;
   width:110px;
   margin-bottom: 20px
+}
+
+.small-logo{
+  display: none;
 }
 
 /* Main Nav */
@@ -179,22 +183,25 @@ overflow: auto;
 .top-nav{
   padding-top: 60px;
   justify-content: center;
-  flex-basis: 500px;
-  font-size: 14px
+  font-size: 14px;
+  max-width: 650px;
+  margin: auto;
 }
 
 .top-nav-list{
-  flex-basis: 50%;
-  padding-top: 18px;
+  padding: 18px 8px 0 8px;
   list-style: none;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  flex-shrink: 0;
+  height: 90px;
+
 }
 
 .top-nav-list li{
-  flex-basis: calc(100%/6);
+  flex-basis: calc((100% / 6) -10px);
   flex-shrink: 0;
+  text-align: center;
+  margin: 0 5px
 }
 
 #selected::after{
@@ -203,7 +210,7 @@ overflow: auto;
   background-color: #adff2f;
   width: 40px;
   height: 3px;
-  margin-left: 25px;
+  margin: auto;
   margin-top: 3px
 }
 
@@ -268,6 +275,21 @@ overflow: auto;
 
 @media screen and (max-width: 700px){
 
+  /* MAIN SCROLL CONTAINER*/
+
+  /* Top Nav */
+
+  .top-nav-list{
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+
+  .top-nav-list li{
+    flex-basis: calc((100% / 3) - 10px);
+    flex-shrink: 1
+  }
+
+
 }
 
 /* < 600 PX */
@@ -277,11 +299,56 @@ overflow: auto;
 
   /* STRUTTURA DI BASE */
 
-  aside.main-side-bar{
-    height:100%;
-    background-color: blue;
-    flex-basis: 80px
+  #main-side-bar{
+    flex-basis: 40px;
+    padding: 0;
+    padding: 0 5px 0 5px;
+    text-align: center;
   }
+
+
+  /* MAIN */
+
+
+  /* SIDEBAR */
+
+  .command_list li {
+    padding: 8px 0
+  }
+
+  .big-logo{
+    display: none
+  }
+
+  .small-logo{
+    padding-top: 10px;
+    width: 20px;
+    display: inline-block;
+  }
+
+  .profile-side, .profile-reminder{
+    width: 40px;
+  }
+
+
+  .profile-pic{
+    width: 20px;
+    margin: 0 5px
+  }
+
+  .hidden-nav{
+    display: none
+  }
+
+  #create-a-playlist{
+    display: none
+  }
+
+  #playlists{
+    display: none
+  }
+
+
 
 
 }
