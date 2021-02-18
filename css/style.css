@@ -20,13 +20,13 @@ main{
 aside.main-side-bar{
   height:100%;
   background-color: blue;
-  width:15%
+  flex-basis: 150px;
+  flex-shrink: 0;
 }
 
 section.scroll-container{
   height: 100%;
   background-color:green;
-  width: 85%;
   overflow: auto;
 }
 
@@ -57,13 +57,22 @@ div.pop-up{
 /* < 700 PX */
 /* ------------------------------------- */
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 700px){
 
 }
 
 /* < 600 PX */
 /* ------------------------------------- */
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 600px){
+
+  /* STRUTTURA DI BASE */
+
+  aside.main-side-bar{
+    height:100%;
+    background-color: blue;
+    flex-basis: 80px
+  }
+
 
 }
