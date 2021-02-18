@@ -10,6 +10,38 @@
   display: flex
 }
 
+/* BUTTONS */
+
+.btn{
+  background-color: transparent;
+  border: none;
+  color: #717171;
+  padding: none
+}
+
+.btn.square{
+  font-size: 20px;
+  width:40px;
+  height:40px;
+  background-color: #a3a3a3;
+  color: #717171
+
+
+
+}
+/* TYPO */
+
+a{
+  text-decoration: none;
+  color: #717171
+}
+
+h4{
+  color: #fff;
+  font-size: 20px;
+  padding-bottom: 10px
+}
+
 /* STRUTTURA DI BASE */
 
 main{
@@ -19,9 +51,10 @@ main{
 
 aside.main-side-bar{
   height:100%;
-  background-color: blue;
+  background-color: #000;
   flex-basis: 150px;
   flex-shrink: 0;
+  padding-left:15px
 }
 
 section.scroll-container{
@@ -44,6 +77,45 @@ div.pop-up{
   z-index: 20
 
 }
+
+/* SIDE BAR */
+
+/* logo */
+
+.aside_logo>img{
+  max-width: 100px
+}
+
+/* Main Nav */
+
+.main_nav{
+  padding-bottom: 20px
+}
+
+.command_list{
+  list-style: none
+}
+
+/* Crea Playlist */
+
+.new-playlist{
+  align-items: center;
+  padding-bottom: 15px
+}
+
+.add{
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px
+}
+
+.create{
+  padding-left: 6px;
+  font-size: 14px
+}
+
+/* Elenco Playlist */
 
 /* MEDIA QUERY */
 
