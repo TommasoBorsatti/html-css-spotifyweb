@@ -11,6 +11,10 @@
   <!-- link allo style css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- link allo style css -->
+  <!-- link a Googlefonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- link a Googlefonts -->
 </head>
 
 <body>
@@ -26,7 +30,7 @@
     <aside id="main-side-bar">
       <!-- Area del Logo -->
       <section id="aside_logo">
-        <img class="big-logo" src="https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.jpg" alt="Logo principale di spotify">
+        <img class="big-logo" src="img/big-logo.png" alt="Logo principale di spotify">
         <img class="small-logo" src="img/small-logo.png" alt="Logo principale di spotify">
       </section>
       <!-- /Area del Logo -->
@@ -34,9 +38,9 @@
       <!-- Nav con lista comandi primari -->
       <nav id="main_nav">
         <ul class="command_list">
-          <li><a class="text-white" href=""><i class="fas fa-home"></i><span class="hidden-nav"> Home</span></a></li>
-          <li><a href=""><i class="fas fa-search"></i><span class="hidden-nav"> Cerca</span></a></li>
-          <li><a href=""><i class="fas fa-book-open"></i><span class="hidden-nav"> La tua libreria</span></a></li>
+          <li><a class="text-white" href=""><img class="icon-img"  src="img/home.svg" alt=""><span class="hidden-nav">Home</span></a></li>
+          <li><a  href=""><img class="icon-img" src="img/search.svg" alt=""><span class="hidden-nav">Cerca</span></a></li>
+          <li><a  href=""><img class="icon-img" src="img/library.svg" alt=""><span class="hidden-nav">La tua libreria</span></a></li>
         </ul>
       </nav>
       <!-- /Nav con lista comandi primari-->
@@ -69,10 +73,10 @@
 
         <!-- Sezione Profilo e Install App -->
       <section id="profile-side">
-        <a class="hidden-nav" href="">Installa app</a>
+        <a href=""><i class="side-icon far fa-arrow-alt-circle-down"></i><span class="hidden-nav"> Installa app</span></a>
         <hr class="hidden-nav">
         <div class="profile-reminder flex">
-          <img class="profile-pic" src="https://via.placeholder.com/35x35" alt="immagine del profilo">
+          <img class="profile-pic" src="img/avatar.png" alt="immagine del profilo">
           <h5 class="profile-name text-white hidden-nav">John Doe</h5>
         </div>
       </section>
@@ -134,6 +138,43 @@
       </section>
       <!-- /Prima riga Recently played -->
 
+      <!-- Seconda riga Creato Per-->
+      <section id="creato-per" class="row">
+        <h2 class="row-title text-white">Creato per John Doe</h2>
+        <h6 class="row-subtitle"> Più ascolti, più accurati saranno i suggerimenti</h6>
+        <div class="album-container flex">
+          <div class="album">
+            <img class="album-pic"src="https://via.placeholder.com/60x60" alt="">
+            <h5 class="album-title text-white">Release Radar</h5>
+            <h6 class="album-subtitle">Daily Mix 1</h6>
+          </div>
+          <div class="album">
+            <img class="album-pic"src="https://via.placeholder.com/60x60" alt="">
+            <h5 class="album-title text-white">Heavy Metal</h5>
+            <h6 class="album-subtitle">Subtitle</h6>
+          </div>
+        </div>
+      </section>
+      <!-- /Seconda Riga Creato Per -->
+
+      <!-- Terza riga Artisti-->
+      <section id="artisti" class="row">
+        <h2 class="row-title text-white">Artisti più popolari</h2>
+        <h6 class="row-subtitle"> Più ascolti, più accurati saranno i suggerimenti</h6>
+        <div class="album-container flex">
+          <div class="album">
+            <img class="album-pic round"src="https://via.placeholder.com/60x60" alt="">
+            <h5 class="album-title text-white">Release Radar</h5>
+            <h6 class="album-subtitle">Daily Mix 1</h6>
+          </div>
+          <div class="album">
+            <img class="album-pic round"src="https://via.placeholder.com/60x60" alt="">
+            <h5 class="album-title text-white">Heavy Metal</h5>
+            <h6 class="album-subtitle">Subtitle</h6>
+          </div>
+        </div>
+      </section>
+      <!-- /Terza riga Artisti -->
 
     </section>
     <!-- /Sezione primaria con album e brani scrollabili -->
