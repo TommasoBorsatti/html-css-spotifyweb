@@ -78,7 +78,7 @@ h4{
 
 hr{
   margin: 6px 0;
-  width:120px
+  width:142px
 }
 /* COLORS */
 
@@ -114,8 +114,7 @@ main{
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-left: 8px;
-  padding-top: 3px
+  padding:3px 8px 0 8px;
 }
 
 .side-section{
