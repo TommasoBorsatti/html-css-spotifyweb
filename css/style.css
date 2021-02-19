@@ -78,12 +78,16 @@ h4{
 
 hr{
   margin: 6px 0;
-  width:142px
+  width:100%
 }
 /* COLORS */
 
 .text-white{
   color:#fff
+}
+
+.text-black{
+  color: #000
 }
 
 /* STRUTTURA DI BASE */
@@ -112,13 +116,10 @@ main{
   flex-basis: 150px;
   flex-shrink: 0;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   padding:3px 8px 0 8px;
 }
 
 .side-section{
-  flex-basis: calc((100% / 5) -4px);
   margin: 2px 0;
 }
 
@@ -133,7 +134,9 @@ footer{
   background-color: #282828;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px
+  padding: 0 10px;
+  position: relative;
+  z-index: 10
 }
 
 /* SIDE BAR */
@@ -274,15 +277,32 @@ aside{
   text-align: center;
 }
 
+.over-title-box{
+  position: absolute;
+  bottom: 0px;
+  left: 10px;
+  width:30%
+}
+
+.over-title{
+  font-size: 18px;
+  font-weight: 700
+}
+
 .album-container{
   padding: 10px 0 20px 0;
   justify-content: space-around;
-  align-items: center
+  align-items: flex-start;
 }
 
 .album{
   flex-basis: calc((100% / 6) - 20px);
   margin: 5px 10px;
+}
+
+.album-box{
+  position:relative
+
 }
 
 .album-pic{
