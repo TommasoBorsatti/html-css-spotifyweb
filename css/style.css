@@ -224,6 +224,7 @@ overflow: auto;
   font-size: 14px;
   max-width: 650px;
   margin: auto;
+  font-weight: 700
 }
 
 .top-nav-list{
@@ -347,11 +348,13 @@ overflow: auto;
 }
 
 .player-icon{
-  font-size: 16px
+  font-size: 16px;
+  margin-bottom: 5px
 }
 
 .play-icon{
-  font-size: 18px
+  font-size: 18px;
+  margin-bottom: 10px
 }
 
 .footer-nav-right{
@@ -405,7 +408,7 @@ overflow: auto;
 /* < 700 PX */
 /* ------------------------------------- */
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 768px){
 
   /* MAIN SCROLL CONTAINER*/
 
@@ -455,11 +458,7 @@ overflow: auto;
     flex-basis: 150px
   }
 
-  
-
-
 }
-
 
 
 /* < 600 PX */
@@ -525,6 +524,18 @@ overflow: auto;
   }
 
 
+}
 
+
+/* < 450 PX */
+/* ------------------------------------- */
+
+@media screen and (max-width: 600px){
+
+  /* MAIN-SCROLL-CONTAINER */
+
+  .top-nav{
+    font-size: 11px
+  }
 
 }
