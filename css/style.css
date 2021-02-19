@@ -72,8 +72,8 @@ a:hover{
 
 h4{
   color: #fff;
-  font-size: 20px;
-  padding-bottom: 10px
+  font-size: 16px;
+  padding: 10px 0
 }
 
 hr{
@@ -121,8 +121,6 @@ main{
 .side-section{
   flex-basis: calc((100% / 5) -4px);
   margin: 2px 0;
-  background-color: blue;
-
 }
 
 #main-scroll-container{
@@ -158,9 +156,6 @@ aside{
 
 /* Main Nav */
 
-#main_nav{
-}
-
 .command_list{
   list-style: none
 }
@@ -174,7 +169,7 @@ aside{
 
 .new-playlist{
   align-items: center;
-  padding-bottom: 15px
+  padding-bottom: 10px
 }
 
 .add{
@@ -191,9 +186,10 @@ aside{
 
 /* Elenco Playlist */
 
-.playlist-scroll{
-overflow: auto;
-flex-shrink: 1
+#playlists{
+  overflow: auto;
+  flex-shrink: 1
+
 }
 
 .playlist-item{
@@ -208,7 +204,8 @@ flex-shrink: 1
 }
 
 #profile-side{
-  margin-top: auto
+  margin-top: auto;
+  padding-top: 5px;
 }
 
  .profile-reminder{
@@ -480,10 +477,13 @@ flex-shrink: 1
   #main-side-bar{
     flex-basis: 40px;
     padding: 0;
-    padding: 0 5px 0 5px;
-    text-align: center;
+    align-items: center;
+
   }
 
+  .side-section{
+    flex-basis: (100% / 3)
+  }
 
   /* MAIN */
 
@@ -504,16 +504,6 @@ flex-shrink: 1
     display: inline-block;
   }
 
-  .profile-side, .profile-reminder{
-    width: 40px;
-  }
-
-  .side-icon{
-    padding:0;
-    margin-right: 10px;
-    margin-bottom:15px
-  }
-
   .profile-pic{
     width: 20px;
     margin: 0 5px
@@ -530,6 +520,10 @@ flex-shrink: 1
 
   #playlists{
     display: none
+  }
+
+  #profile-side{
+    text-align: center;
   }
 
 
