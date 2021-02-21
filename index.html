@@ -217,10 +217,8 @@
           <h5 class="album-title text-white">Limp Wrist</h5>
           <h6 class="song-title">I love hardcore boys</h6>
       </div>
-      <div class="add-favorite">
+      <div class="left-buttons flex">
         <button class="btn"><i class="footer-icon far fa-heart"></i></button>
-      </div>
-      <div class="search-file">
         <button class="btn"><i class="footer-icon far fa-folder"></i></button>
       </div>
     </div>
@@ -233,10 +231,12 @@
       <button class="btn text-white"><i class="play-icon far fa-play-circle"></i></button>
       <button class="btn text-white"><i class="player-icon fas fa-step-forward"></i></button>
       <button class="btn text-white"><i class="player-icon fas fa-redo-alt"></i></button>
-      <div class="playing-time text-white"><span>0:25</span></div>
-      <div class="plain-bar"><hr></div>
-      <div class="empty-bar"><hr></div>
-      <div class="left-time text-white"><span>4:35</span></div>
+      <div class="player-bar flex">
+        <div class="playing-time text-white"><span>0:25</span></div>
+        <div class="plain-bar"></div>
+        <div class="empty-bar"></div>
+        <div class="left-time text-white"><span>4:35</span></div>
+      </div>
     </div>
     <!-- /Sezione centrale del footer con player -->
 
@@ -244,9 +244,11 @@
     <div class="footer-nav-right flex">
       <button class="btn"><i class="footer-icon fas fa-list-ul"></i></button>
       <button class="btn"><i class="footer-icon fas fa-desktop"></i></button>
-      <button class="btn"><i class="footer-icon fas fa-volume-up"></i></button>
-      <div class="plain-volume"><hr></div>
-      <div class="empty-volume"><hr></div>
+      <div class="volume-bar flex">
+        <button class="btn"><i class="footer-icon fas fa-volume-up"></i></button>
+        <div class="plain-volume"></div>
+        <div class="empty-volume"></div>
+      </div>
     </div>
     <!-- /Sezione destra del footer -->
   </footer>

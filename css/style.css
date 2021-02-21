@@ -97,8 +97,9 @@ hr{
   align-items: center;
   position:fixed;
   top:0;
+  left:150px;
+  right:0;
   height: 60px;
-  width:100vw;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 20
 
@@ -329,20 +330,41 @@ aside{
 /* FOOTER */
 
 .footer-nav-left{
-  flex-basis: 180px;
+  flex-basis: 15%;
   align-items: center;
-  justify-content: space-around;
+}
+
+.footer-nav-left > div{
+  margin: 0 3px
 }
 
 .player-pic{
-  flex-basis: 40px
+  flex-basis: 50px;
+  flex-shrink:0
 }
 .player-pic img{
   width:100%
 }
 
+.player-title{
+  margin: 0 4px;
+}
+
+.album-title,
+.song-title{
+  text-align: left;
+}
+
+.left-buttons{
+  flex-wrap: wrap;
+}
+
+.left-buttons button{
+  margin: 0 3px
+}
+
 .footer-player{
-  flex-basis: 250px;
+  flex-basis: 25%;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -350,26 +372,35 @@ aside{
 }
 
 .footer-player button{
-  flex-basis: calc(100% / 5)
+  margin: 0 8px
+}
+
+.player-bar{
+  flex-basis: 100%;
+  align-items: center
+
 }
 
 .footer-player span{
   font-size: 10px;
   vertical-align: middle;
+  flex-basis: 10%;
 }
 
-.plain-bar hr{
-  width: 55px;
+.plain-bar {
+  width: 30%;
+
   height: 3px;
   background-color: #fff;
-  margin-left: 5px
+  margin-left: 5px;
 }
 
-.empty-bar hr{
-  width: 120px;
+.empty-bar {
+  width: 60%;
   height: 3px;
   background-color: #5a5a5a;
-  margin-right: 5px
+  margin-right: 5px;
+
 }
 
 .player-icon{
@@ -383,25 +414,30 @@ aside{
 }
 
 .footer-nav-right{
-  flex-basis: 150px;
+  flex-basis: 15%;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+
 }
 
 .footer-nav-right button{
-  flex-basis: calc(15% - 10px);
-  margin: 0 5px
+  margin: 3px 5px
 }
 
-.plain-volume hr{
-  width: 30px;
+.volume-bar{
+  flex-basis: 60%;
+  align-items: center
+}
+
+.plain-volume{
+  width: 20%;
   height: 3px;
   background-color: #fff;
   margin-left: 5px
 }
 
-.empty-volume hr{
-  width: 65px;
+.empty-volume{
+  width: 70%;
   height: 3px;
   background-color: #5a5a5a;
   margin-right: 5px
@@ -545,6 +581,18 @@ aside{
     text-align: center;
   }
 
+  /* FOOTER */
+
+  /* Footer Nav Left */
+  .player-pic{
+    display: none
+  }
+
+  /* footer nav right */
+
+  .footer-nav-right{
+    justify-content: flex-end
+  }
 
 }
 
@@ -559,5 +607,38 @@ aside{
   .top-nav{
     font-size: 11px
   }
+
+  /* FOOTER */
+
+  /* Footer Left Nav */
+
+  .footer-nav-left{
+    font-size: 12px;
+    flex-basis: 10%
+  }
+
+  /* Player Bar */
+  .player-icon{
+    font-size: 14px;
+    margin-bottom: 10px
+  }
+
+  .play-icon{
+    font-size: 16px;
+    margin-bottom: 10px
+  }
+
+
+  /* Footer Nav Right */
+  .footer-nav-right{
+    flex-wrap: wrap;
+    flex-basis: 18%
+  }
+
+  .volume-bar{
+    flex-basis: 100%
+  }
+
+
 
 }
