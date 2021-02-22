@@ -18,6 +18,18 @@
   text-align: center
 }
 
+.overlay:hover.overlay::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10
+}
+
+
 /* BUTTONS */
 
 .btn{
@@ -27,14 +39,34 @@
   padding: none
 }
 
+.btn.round:hover{
+  transform: scale(1.1);
+}
+
+.btn:active,
+.btn:focus{
+  outline: none;
+}
+
+.btn:hover{
+  color:#fff;
+  cursor:pointer;
+}
+
 .btn.square{
   font-size: 30px;
   font-weight: bold;
   width:40px;
   height:40px;
   background-color: #a3a3a3;
-  color: #717171
+  color: #000
 }
+
+.btn.square:hover{
+  background-color: #fff;
+  color: #000
+}
+
 
 .btn.round{
   border-radius: 15px;
@@ -45,13 +77,14 @@
   padding: 8px 25px;
 }
 
-.btn:active,
-.btn:hover,
-.btn:focus{
-  cursor:pointer;
-  outline: none;
+.btn.cover-player{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  font-size: 50px;
   color: #fff;
-
+  display: none
 }
 
 /* TYPO */
@@ -164,8 +197,7 @@ aside{
 }
 
 .icon-img{
-  width:30px;
-  vertical-align: bottom;
+  width:18px;
 }
 
 /* Crea Playlist */
@@ -179,6 +211,10 @@ aside{
   width: 40px;
   height: 40px;
   text-align: center;
+}
+
+.plus-icon{
+  font-size: 18px;
   line-height: 40px
 }
 
@@ -270,7 +306,7 @@ aside{
 }
 
 .album-title{
-  margin-top: 10px
+  margin: 10px 0
 }
 
 .album-title,
@@ -292,7 +328,6 @@ aside{
 
 .album-container{
   padding: 10px 0 20px 0;
-  justify-content: space-around;
   align-items: flex-start;
 }
 
@@ -301,13 +336,22 @@ aside{
   margin: 5px 10px;
 }
 
-.album-box{
-  position:relative
+.cover-box{
+  position: relative;
+}
 
+.cover-box:hover .btn.cover-player{
+  display:block;
+  z-index: 20;
+}
+
+.cover-box:hover{
+  cursor: pointer
 }
 
 .album-pic{
-  width:100%
+  width:100%;
+  display: block
 }
 
 /* Creato Per John Doe e Artisti*/
@@ -329,9 +373,11 @@ aside{
 
 /* FOOTER */
 
+/* Footee Nav Left */
+
 .footer-nav-left{
-  flex-basis: 15%;
   align-items: center;
+  flex-basis: 20%
 }
 
 .footer-nav-left > div{
@@ -350,9 +396,13 @@ aside{
   margin: 0 4px;
 }
 
-.album-title,
-.song-title{
+.footer-album-title,
+.footer-song-title{
   text-align: left;
+}
+
+.song-title:hover{
+  text-decoration: underline;
 }
 
 .left-buttons{
@@ -363,12 +413,14 @@ aside{
   margin: 0 3px
 }
 
+/* Footer Player */
+
 .footer-player{
-  flex-basis: 25%;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
+  flex-basis: 30%
 }
 
 .footer-player button{
@@ -413,10 +465,13 @@ aside{
   margin-bottom: 10px
 }
 
+/* Footee Nav Right */
+
+
 .footer-nav-right{
   flex-basis: 15%;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
 
 }
 
@@ -494,12 +549,12 @@ aside{
   /* PLayer */
 
   .footer-nav-left{
-    flex-basis: 150px
+    flex-basis: 25%
   }
 
   .footer-player{
-    flex-basis: 180px;
-  }
+    flex-basis: 50%
+}
 
   .plain-bar hr{
     width: 30px;
@@ -534,6 +589,10 @@ aside{
     padding: 0;
     align-items: center;
 
+  }
+
+  .pop-up{
+    left:40px;
   }
 
   .side-section{
@@ -618,6 +677,7 @@ aside{
   }
 
   /* Player Bar */
+
   .player-icon{
     font-size: 14px;
     margin-bottom: 10px

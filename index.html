@@ -59,9 +59,9 @@
       <!-- Nav con lista comandi primari -->
       <nav id="main_nav" class="side-section">
         <ul class="command_list">
-          <li><a class="text-white" href=""><img class="icon-img"  src="img/home.svg" alt=""><span class="hidden-nav">Home</span></a></li>
-          <li><a  href=""><img class="icon-img" src="img/search.svg" alt=""><span class="hidden-nav">Cerca</span></a></li>
-          <li><a  href=""><img class="icon-img" src="img/library.svg" alt=""><span class="hidden-nav">La tua libreria</span></a></li>
+          <li><a class="text-white" href=""><img class="icon-img"  src="img/home.svg" alt=""><span class="hidden-nav"> Home</span></a></li>
+          <li><a  href=""><img class="icon-img" src="img/search.svg" alt=""><span class="hidden-nav"> Cerca</span></a></li>
+          <li><a  href=""><img class="icon-img" src="img/library.svg" alt=""><span class="hidden-nav"> La tua libreria</span></a></li>
         </ul>
       </nav>
       <!-- /Nav con lista comandi primari-->
@@ -70,7 +70,7 @@
       <section id="create-a-playlist" class="side-section">
         <h4 class="playlist_title">PLAYLIST</h4>
         <div class="new-playlist flex">
-          <div class="add"><button class="btn square">+</button></div>
+          <div class="add"><button class="btn square"><i class="plus-icon fas fa-plus"></i></button></div>
           <div class="create"><a href="#">Crea playlist</a></div>
         </div>
       </section>
@@ -126,32 +126,50 @@
         <h2 class="row-title text-white">Recently Played</h2>
         <div class="album-container flex">
           <div class="album">
-            <img class="album-pic"src="img/limp.jpg" alt="copertina di un album">
+            <div class="cover-box overlay">
+              <img class="album-pic"src="img/limp.jpg" alt="copertina di un album">
+              <button class="btn cover-player"><i class="cover-play-icon far fa-play-circle"></i></button>
+            </div>
             <h5 class="album-title text-white">Limp Wrist</h5>
             <h6 class="album-subtitle">Limp Wrist</h6>
           </div>
           <div class="album">
-            <img class="album-pic"src="img/milo.jpg" alt="copertina di un album">
+            <div class="cover-box overlay">
+              <img class="album-pic"src="img/milo.jpg" alt="copertina di un album">
+              <button class="btn cover-player"><i class="cover-play-icon far fa-play-circle"></i></button>
+            </div>
             <h5 class="album-title text-white">Milo goes to college</h5>
             <h6 class="album-subtitle">Descendents</h6>
           </div>
           <div class="album">
-            <img class="album-pic"src="img/threat.jpg" alt="copertina di un album">
+            <div class="cover-box overlay">
+              <img class="album-pic"src="img/threat.jpg" alt="copertina di un album">
+              <button class="btn cover-player"><i class="cover-play-icon far fa-play-circle"></i></button>
+            </div>
             <h5 class="album-title text-white">Minor Threat - Complete Discography</h5>
             <h6 class="album-subtitle">Minor Threat</h6>
           </div>
           <div class="album">
-            <img class="album-pic"src="img/tigers.jpg" alt="copertina di un album">
+            <div class="cover-box overlay">
+              <img class="album-pic"src="img/tigers.jpg" alt="copertina di un album">
+              <button class="btn cover-player"><i class="cover-play-icon far fa-play-circle"></i></button>
+            </div>
             <h5 class="album-title text-white">Tigers Jaw</h5>
             <h6 class="album-subtitle">Tigers Jaw</h6>
           </div>
           <div class="album">
-            <img class="album-pic"src="img/floral.jpg" alt="copertina di un album">
+            <div class="cover-box overlay">
+              <img class="album-pic"src="img/floral.jpg" alt="copertina di un album">
+              <button class="btn cover-player"><i class="cover-play-icon far fa-play-circle"></i></button>
+            </div>
             <h5 class="album-title text-white">Floral Green</h5>
             <h6 class="album-subtitle">Title Fight</h6>
           </div>
           <div class="album">
-            <img class="album-pic"src="img/kollapse.jpg" alt="copertina di un album">
+            <div class="cover-box overlay">
+              <img class="album-pic"src="img/kollapse.jpg" alt="copertina di un album">
+              <button class="btn cover-player"><i class="cover-play-icon far fa-play-circle"></i></button>
+            </div>
             <h5 class="album-title text-white">Kollapse</h5>
             <h6 class="album-subtitle">Breach</h6>
           </div>
@@ -166,18 +184,24 @@
         <div class="album-container flex">
           <div class="album">
             <div class="album-box">
-              <img class="album-pic"src="img/blank.jpg" alt="Immagine di una compilation">
-              <div class="over-title-box">
-                <h4 class="over-title">Il tuo Release Radar</h4>
+              <div class="cover-box overlay">
+                <img class="album-pic"src="img/blank.jpg" alt="Immagine di una compilation">
+                <button class="btn cover-player"><i class="cover-play-icon far fa-play-circle"></i></button>
+                <div class="over-title-box">
+                  <h4 class="over-title">Il tuo Release Radar</h4>
+                </div>
               </div>
             </div>
             <h5 class="album-title text-white">Release Radar</h5>
           </div>
           <div class="album">
             <div class="album-box">
-              <img class="album-pic"src="img/grass1.jpg" alt="immagine di una compilation">
-              <div class="over-title-box">
-                <h4 class="over-title text-black">Il tuo Daily Mix</h4>
+              <div class="cover-box overlay">
+                <img class="album-pic"src="img/grass1.jpg" alt="immagine di una compilation">
+                <button class="btn cover-player"><i class="cover-play-icon far fa-play-circle"></i></button>
+                <div class="over-title-box">
+                  <h4 class="over-title text-black">Il tuo Daily Mix</h4>
+                </div>
               </div>
             </div>
             <h5 class="album-title text-white">Daily Mix 1</h5>
@@ -214,8 +238,8 @@
         <img src="img/limp.jpg" alt="immagine del brano nel player" alt="">
       </div>
       <div class="player-title">
-          <h5 class="album-title text-white">Limp Wrist</h5>
-          <h6 class="song-title">I love hardcore boys</h6>
+          <h5 class="footer-album-title text-white">Limp Wrist</h5>
+          <a href=""><h6 class="footer-song-title">I love hardcore boys</h6></a>
       </div>
       <div class="left-buttons flex">
         <button class="btn"><i class="footer-icon far fa-heart"></i></button>
