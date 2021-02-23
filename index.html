@@ -33,15 +33,16 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <link href="img/favicon/favicon-16x16.png" rel="shortcut icon" href=".ico">
+  <link href="img/favicon/favicon-16x16.png" rel="shortcut icon">
   <!-- /link favicon -->
 </head>
 
 <body>
 
   <main class="flex">
+
     <!-- pop up fixed top che sostituisce l'header -->
-    <div class="pop-up flex">
+    <div id="pop-up" class="flex">
       <button class="btn round">EFFETTUA L'UPGRADE</button>
     </div>
     <!-- /pop up fixed top che sostituisce l'header -->
@@ -50,27 +51,27 @@
     <aside id="main-side-bar" class="flex">
 
       <!-- Area del Logo -->
-      <section id="aside_logo" class="side-section">
-        <img class="big-logo" src="img/logo.svg" alt="Logo principale di spotify">
+      <section id="aside-logo" class="side-section">
+        <img class="big-logo hidden-nav" src="img/logo.svg" alt="Logo principale di spotify">
         <img class="small-logo" src="img/small-logo.png" alt="Logo principale di spotify">
       </section>
       <!-- /Area del Logo -->
 
       <!-- Nav con lista comandi primari -->
-      <nav id="main_nav" class="side-section">
-        <ul class="command_list">
-          <li><a class="text-white" href=""><img class="icon-img"  src="img/home.svg" alt=""><span class="hidden-nav"> Home</span></a></li>
-          <li><a  href=""><img class="icon-img" src="img/search.svg" alt=""><span class="hidden-nav"> Cerca</span></a></li>
-          <li><a  href=""><img class="icon-img" src="img/library.svg" alt=""><span class="hidden-nav"> La tua libreria</span></a></li>
+      <nav id="main-nav" class="side-section">
+        <ul class="command-list list-reset">
+          <li><a class="text-white" href=""><img class="command-icon"  src="img/home.svg" alt=""><span class="hidden-nav"> Home</span></a></li>
+          <li><a  href=""><img class="command-icon" src="img/search.svg" alt=""><span class="hidden-nav"> Cerca</span></a></li>
+          <li><a  href=""><img class="command-icon" src="img/library.svg" alt=""><span class="hidden-nav"> La tua libreria</span></a></li>
         </ul>
       </nav>
       <!-- /Nav con lista comandi primari-->
 
       <!-- Sezione Nuova playlist -->
       <section id="create-a-playlist" class="side-section">
-        <h4 class="playlist_title">PLAYLIST</h4>
+        <h4 class="playlist-title text-white">PLAYLIST</h4>
         <div class="new-playlist flex">
-          <div class="add"><button class="btn square"><i class="plus-icon fas fa-plus"></i></button></div>
+          <div class="add text-center"><button class="btn square"><i class="plus-icon fas fa-plus"></i></button></div>
           <div class="create"><a href="#">Crea playlist</a></div>
         </div>
       </section>
@@ -78,7 +79,6 @@
 
       <!-- Sezione Elenco Playlist con scrollbar verticale -->
       <section id="playlists" class="side-section">
-        <div class="playlist-scroll">
           <ul class="playlist-collection">
             <li class="playlist-item"><a href="">Nome Playlist</a></li>
             <li class="playlist-item"><a href="">Nome Playlist</a></li>
@@ -88,7 +88,6 @@
             <li class="playlist-item"><a href="">Nome Playlist</a></li>
             <li class="playlist-item"><a href="">Nome Playlist</a></li>
           </ul>
-        </div>
       </section>
       <!-- /Sezione Elenco Playlist con scrollbar verticale -->
 
@@ -98,7 +97,7 @@
         <hr class="hidden-nav">
         <div class="profile-reminder flex">
           <img class="profile-pic" src="img/bors.jpg" alt="immagine del profilo">
-          <h5 class="profile-name text-white hidden-nav">Tommaso Borsatti</h5>
+          <a href=""><h5 class="profile-name text-white hidden-nav">Tommaso Borsatti</h5></a>
         </div>
       </section>
       <!-- /Sezione Profilo e Install App -->
@@ -109,14 +108,14 @@
     <!-- Sezione primaria con album e brani scrollabili -->
     <section id="main-scroll-container">
       <!-- Nav della sezione scrollabile -->
-      <nav class="top-nav">
-        <ul class="top-nav-list flex">
+      <nav id="top-nav">
+        <ul class="top-nav-list list-reset flex ">
           <li id="selected"><a href="">IN EVIDENZA</a></li>
-          <li><a href="">PODCAST</a></li>
-          <li><a href="">CLASSIFICHE</a></li>
-          <li><a href="">GENERI E MOOD</a></li>
-          <li><a href="">NUOVE USCITE</a></li>
-          <li><a href="">SCOPRI</a></li>
+          <li><a class="top-nav-selection" href="">PODCAST</a></li>
+          <li><a class="top-nav-selection" href="">CLASSIFICHE</a></li>
+          <li><a class="top-nav-selection" href="">GENERI E MOOD</a></li>
+          <li><a class="top-nav-selection" href="">NUOVE USCITE</a></li>
+          <li><a class="top-nav-selection" href="">SCOPRI</a></li>
         </ul>
       </nav>
       <!--/Nav della sezione scrollabile -->
@@ -127,45 +126,45 @@
         <div class="album-container flex">
           <div class="album">
             <div class="cover-box overlay">
-              <img class="album-pic"src="img/limp.jpg" alt="copertina di un album">
-          </div>
-            <h5 class="album-title text-white">Limp Wrist</h5>
-            <h6 class="album-subtitle">Limp Wrist</h6>
+              <img class="album-pic" src="img/limp.jpg" alt="copertina di un album">
+            </div>
+            <h5 class="album-title text-white text-center">Limp Wrist</h5>
+            <h6 class="album-subtitle text-center">Limp Wrist</h6>
           </div>
           <div class="album">
             <div class="cover-box overlay">
-              <img class="album-pic"src="img/milo.jpg" alt="copertina di un album">
+              <img class="album-pic" src="img/milo.jpg" alt="copertina di un album">
             </div>
-            <h5 class="album-title text-white">Milo goes to college</h5>
-            <h6 class="album-subtitle">Descendents</h6>
+            <h5 class="album-title text-white text-center">Milo goes to college</h5>
+            <h6 class="album-subtitle text-center">Descendents</h6>
           </div>
           <div class="album">
             <div class="cover-box overlay">
-              <img class="album-pic"src="img/threat.jpg" alt="copertina di un album">
+              <img class="album-pic" src="img/threat.jpg" alt="copertina di un album">
             </div>
-            <h5 class="album-title text-white">Minor Threat - Complete Discography</h5>
-            <h6 class="album-subtitle">Minor Threat</h6>
+            <h5 class="album-title text-white text-center">Minor Threat - Complete Discography</h5>
+            <h6 class="album-subtitle text-center">Minor Threat</h6>
           </div>
           <div class="album">
             <div class="cover-box overlay">
-              <img class="album-pic"src="img/tigers.jpg" alt="copertina di un album">
+              <img class="album-pic" src="img/tigers.jpg" alt="copertina di un album">
             </div>
-            <h5 class="album-title text-white">Tigers Jaw</h5>
-            <h6 class="album-subtitle">Tigers Jaw</h6>
+            <h5 class="album-title text-white text-center">Tigers Jaw</h5>
+            <h6 class="album-subtitle text-center">Tigers Jaw</h6>
           </div>
           <div class="album">
             <div class="cover-box overlay">
-              <img class="album-pic"src="img/floral.jpg" alt="copertina di un album">
+              <img class="album-pic" src="img/floral.jpg" alt="copertina di un album">
             </div>
-            <h5 class="album-title text-white">Floral Green</h5>
-            <h6 class="album-subtitle">Title Fight</h6>
+            <h5 class="album-title text-white text-center">Floral Green</h5>
+            <h6 class="album-subtitle text-center">Title Fight</h6>
           </div>
           <div class="album">
             <div class="cover-box overlay">
-              <img class="album-pic"src="img/kollapse.jpg" alt="copertina di un album">
+              <img class="album-pic" src="img/kollapse.jpg" alt="copertina di un album">
             </div>
-            <h5 class="album-title text-white">Kollapse</h5>
-            <h6 class="album-subtitle">Breach</h6>
+            <h5 class="album-title text-white text-center">Kollapse</h5>
+            <h6 class="album-subtitle text-center">Breach</h6>
           </div>
         </div>
       </section>
@@ -177,26 +176,22 @@
         <h6 class="row-subtitle"> Più ascolti, più accurati saranno i suggerimenti</h6>
         <div class="album-container flex">
           <div class="album">
-            <div class="album-box">
               <div class="cover-box overlay">
-                <img class="album-pic"src="img/blank.jpg" alt="Immagine di una compilation">
+                <img class="album-pic" src="img/blank.jpg" alt="Immagine di una compilation">
                 <div class="over-title-box">
-                  <h4 class="over-title">Il tuo Release Radar</h4>
+                  <h4 class="over-title text-white">Il tuo Release Radar</h4>
                 </div>
               </div>
-            </div>
-            <h5 class="album-title text-white">Release Radar</h5>
+            <h5 class="album-title text-white text-center">Release Radar</h5>
           </div>
           <div class="album">
-            <div class="album-box">
               <div class="cover-box overlay">
-                <img class="album-pic"src="img/grass1.jpg" alt="immagine di una compilation">
+                <img class="album-pic" src="img/grass1.jpg" alt="immagine di una compilation">
                 <div class="over-title-box">
                   <h4 class="over-title text-black">Il tuo Daily Mix</h4>
                 </div>
               </div>
-            </div>
-            <h5 class="album-title text-white">Daily Mix 1</h5>
+            <h5 class="album-title text-white text-center">Daily Mix 1</h5>
           </div>
         </div>
       </section>
@@ -208,34 +203,35 @@
         <h6 class="row-subtitle"> Più ascolti, più accurati saranno i suggerimenti</h6>
         <div class="album-container flex">
           <div class="album">
-            <div class="cover-box artist overlay-round">
-              <img class="album-pic round"src="img/serpe.jpg" alt="immagine di un artista">
+            <div class="cover-box round artist overlay">
+              <img class="album-pic" src="img/serpe.jpg" alt="immagine di un artista">
             </div>
-            <h5 class="album-title text-white">Serpe</h5>
+            <h5 class="album-title text-white text-center">Serpe</h5>
           </div>
           <div class="album">
-            <div class="cover-box artist overlay-round">
-              <img class="album-pic round"src="img/nigredo.png" alt="immagine di un artista">
+            <div class="cover-box round artist overlay">
+              <img class="album-pic" src="img/nigredo.png" alt="immagine di un artista">
             </div>
-            <h5 class="album-title text-white">THĒLEMA</h5>
+            <h5 class="album-title text-white text-center">THĒLEMA</h5>
           </div>
         </div>
       </section>
       <!-- /Terza riga Artisti -->
-
     </section>
     <!-- /Sezione primaria con album e brani scrollabili -->
+
   </main>
 
   <footer class="flex">
+
     <!-- Sezione sinistra del footer -->
-    <div class="footer-nav-left flex">
+    <div class="footer-nav-left footer-section flex">
       <div class="player-pic">
-        <img src="img/limp.jpg" alt="immagine del brano nel player" alt="">
+        <img src="img/youth.jpg" alt="immagine del brano nel player">
       </div>
       <div class="player-title">
-          <h5 class="footer-album-title text-white">Limp Wrist</h5>
-          <a href=""><h6 class="footer-song-title">I love hardcore boys</h6></a>
+          <h5 class="footer-album-title text-white">Time Flies</h5>
+          <a href=""><h6 class="footer-song-title">Run</h6></a>
       </div>
       <div class="left-buttons flex">
         <button class="btn"><i class="footer-icon far fa-heart"></i></button>
@@ -245,10 +241,10 @@
     <!-- /Sezione sinistra del footer -->
 
     <!-- Sezione centrale del footer con player -->
-    <div class="footer-player flex">
+    <div class="footer-player footer-section flex">
       <button class="btn text-white"><i class="player-icon fas fa-random"></i></button>
       <button class="btn text-white"><i class="player-icon fas fa-step-backward"></i></button>
-      <button class="btn text-white"><i class="play-icon far fa-play-circle"></i></button>
+      <button class="btn text-white"><i class="play-icon player-icon far fa-play-circle"></i></button>
       <button class="btn text-white"><i class="player-icon fas fa-step-forward"></i></button>
       <button class="btn text-white"><i class="player-icon fas fa-redo-alt"></i></button>
       <div class="player-bar flex">
@@ -261,7 +257,7 @@
     <!-- /Sezione centrale del footer con player -->
 
     <!-- Sezione destra del footer -->
-    <div class="footer-nav-right flex">
+    <div class="footer-nav-right footer-section flex">
       <button class="btn"><i class="footer-icon fas fa-list-ul"></i></button>
       <button class="btn"><i class="footer-icon fas fa-desktop"></i></button>
       <div class="volume-bar flex">
@@ -271,6 +267,7 @@
       </div>
     </div>
     <!-- /Sezione destra del footer -->
+
   </footer>
 
 </body>

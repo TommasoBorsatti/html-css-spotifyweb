@@ -1,10 +1,13 @@
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
 /* MIX */
+
 
 .flex{
   display: flex
@@ -16,6 +19,15 @@
 
 .text-center{
   text-align: center
+}
+
+.list-reset{
+  list-style: none
+}
+
+.round{
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .overlay::after{
@@ -35,48 +47,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0
+  opacity: 0;
+  transition: opacity 0.3s linear;
 }
 
 .overlay:hover.overlay::after{
   opacity: 1;
-  transition: opacity 0.3s linear;
 }
-
-.overlay-round:hover.overlay-round::after{
-  content: "";
-  position: absolute;
-  top: 0;
-  left:0;
-  width:100%;
-  height:100%;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
 
 
 /* BUTTONS */
+
 
 .btn{
   background-color: transparent;
   border: none;
   color: #717171;
-  padding: none
-}
-
-.btn.round:hover{
-  transform: scale(1.1);
-}
-
-.btn:active,
-.btn:focus{
-  outline: none;
+  padding: 0;
+  cursor:pointer;
 }
 
 .btn:hover{
   color:#fff;
-  cursor:pointer;
+}
+
+.btn:focus{
+  outline: none;
 }
 
 .btn.square{
@@ -93,7 +89,6 @@
   color: #000
 }
 
-
 .btn.round{
   border-radius: 15px;
   border: 1px solid white;
@@ -103,18 +98,39 @@
   padding: 8px 25px;
 }
 
-/* .btn.cover-player{
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%, -50%);
-  font-size: 50px;
-  color: #fff;
-  display: none;
-  z-index: 10
-} */
+.btn.round:hover{
+  transform: scale(1.1);
+}
+
+.footer-player .btn:hover{
+  transform: scale(1.2);
+}
+
+
+/* BARS */
+
+
+.player-bar:hover .plain-bar,
+.volume-bar:hover .plain-volume{
+  background-color: #adff2f;
+}
+
+.player-bar:hover .plain-bar::after,
+.volume-bar:hover .plain-volume::after{
+  content: "";
+  width: 12px;
+  height:12px;
+  border-radius: 50%;
+  background-color: #fff;
+  position:absolute;
+  right: -1px;
+  top: -4px;
+  display: block
+}
+
 
 /* TYPO */
+
 
 body{
   color: #666666;
@@ -130,17 +146,14 @@ a:hover{
   color: #fff;
 }
 
-h4{
-  color: #fff;
-  font-size: 16px;
-  padding: 10px 0
-}
-
 hr{
   margin: 6px 0;
   width:100%
 }
+
+
 /* COLORS */
+
 
 .text-white{
   color:#fff
@@ -150,9 +163,11 @@ hr{
   color: #000
 }
 
+
 /* STRUTTURA DI BASE */
 
-.pop-up{
+
+#pop-up{
   justify-content: flex-end;
   align-items: center;
   position:fixed;
@@ -162,12 +177,10 @@ hr{
   height: 60px;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 20
-
 }
 
 main{
   height: calc(100vh - 75px);
-  justify-content:flex-start;
   background-color:#141922;
 }
 
@@ -181,13 +194,14 @@ main{
 }
 
 .side-section{
-  margin: 2px 0;
+  margin: 3px 0;
 }
 
 #main-scroll-container{
   height: 100%;
-  overflow: auto;
-  width: 100%
+  width: 100%;
+  overflow-y: auto;
+
 }
 
 footer{
@@ -200,13 +214,17 @@ footer{
   z-index: 10
 }
 
+
 /* SIDE BAR */
+
 
 aside{
   font-size: 12px
 }
 
+
 /* logo */
+
 
 .big-logo{
   height: 30px;
@@ -217,17 +235,22 @@ aside{
   display: none;
 }
 
+
 /* Main Nav */
 
-.command_list{
-  list-style: none
-}
 
-.icon-img{
+.command-icon{
   width:18px;
 }
 
+
 /* Crea Playlist */
+
+
+.playlist-title{
+  font-size: 16px;
+  padding: 10px 0
+}
 
 .new-playlist{
   align-items: center;
@@ -237,7 +260,6 @@ aside{
 .add{
   width: 40px;
   height: 40px;
-  text-align: center;
 }
 
 .plus-icon{
@@ -250,28 +272,30 @@ aside{
   font-size: 14px
 }
 
+
 /* Elenco Playlist */
+
 
 #playlists{
   overflow: auto;
-  flex-shrink: 1
-
 }
 
 .playlist-item{
   padding: 5px 0
 }
 
+
 /* Sezione Profilo */
 
-.side-icon{
-  margin-bottom: 5px;
-  font-size: 11px
-}
 
 #profile-side{
   margin-top: auto;
   padding: 5px 0;
+}
+
+.side-icon{
+  margin-bottom: 5px;
+  font-size: 11px
 }
 
  .profile-reminder{
@@ -287,34 +311,42 @@ aside{
    padding-left: 10px
  }
 
+
 /* MAIN SCROLL CONTAINER */
+
 
 /* Top Nav */
 
-.top-nav{
-  padding-top: 60px;
-  justify-content: center;
-  font-size: 14px;
+
+#top-nav{
   max-width: 650px;
   margin: auto;
+  padding-top: 60px;
+  font-size: 14px;
   font-weight: 700
 }
 
 .top-nav-list{
   padding: 18px 8px 0 8px;
-  list-style: none;
-  flex-wrap: nowrap;
+  margin: 15px 0 18px 0;
   justify-content: space-evenly;
-  height: 70px;
-  margin: 15px 0 20px 0
-
+  align-content: space-between;
 }
 
 .top-nav-list li{
   flex-basis: calc((100% / 6) -10px);
-  flex-shrink: 0;
   text-align: center;
-  margin: 0 5px
+  margin: 0px 5px 18px 5px
+}
+
+.top-nav-selection:hover.top-nav-selection::after{
+  content: "";
+  display: block;
+  background-color: #adff2f;
+  width: 40px;
+  height: 3px;
+  margin: auto;
+  margin-top: 4px
 }
 
 #selected::after{
@@ -324,34 +356,16 @@ aside{
   width: 40px;
   height: 3px;
   margin: auto;
-  margin-top: 3px
+  margin-top: 4px
 }
+
 
 /* Recently Played */
 
-.row-title{
+
+.row-title,
+.row-subtitle{
   padding-left: 10px
-}
-
-.album-title{
-  margin: 10px 0
-}
-
-.album-title,
-.album-subtitle{
-  text-align: center;
-}
-
-.over-title-box{
-  position: absolute;
-  bottom: 0px;
-  left: 10px;
-  width:30%
-}
-
-.over-title{
-  font-size: 18px;
-  font-weight: 700
 }
 
 .album-container{
@@ -366,13 +380,7 @@ aside{
 
 .cover-box{
   position: relative;
-}
-
-/* .cover-box:hover .btn.cover-player{
-  display:block;
-} */
-
-.cover-box:hover{
+  transition: transform 0.2s linear;
   cursor: pointer
 }
 
@@ -381,56 +389,57 @@ aside{
   display: block
 }
 
+.album-title{
+  margin: 10px 0
+}
+
+.over-title-box{
+  width:30%;
+  position: absolute;
+  bottom: 3px;
+  left: 10px;
+}
+
+.over-title{
+  font-size: 18px;
+  font-weight: 700
+}
+
+
 /* Creato Per John Doe e Artisti*/
 
-.row-subtitle{
-  padding-left: 10px
-}
-
-#creato-per .album-container,
-#artisti .album-container{
-  justify-content: flex-start;
-}
 
 .cover-box.artist:hover{
   transform: scale(1.1);
 }
 
 
-.album-pic.round{
-  width:100%;
-  border-radius: 50%
+/* FOOTER */
+
+.footer-section{
+  flex-basis: calc((100% / 3) - 10px);
 }
 
-
-/* FOOTER */
 
 /* Footee Nav Left */
 
+
 .footer-nav-left{
   align-items: center;
-  flex-basis: 20%
+  /* flex-basis: 20% */
 }
 
 .footer-nav-left > div{
-  margin: 0 3px
+  padding: 0 3px
 }
 
 .player-pic{
   flex-basis: 50px;
   flex-shrink:0
 }
+
 .player-pic img{
   width:100%
-}
-
-.player-title{
-  margin: 0 4px;
-}
-
-.footer-album-title,
-.footer-song-title{
-  text-align: left;
 }
 
 .footer-song-title:hover{
@@ -442,17 +451,19 @@ aside{
 }
 
 .left-buttons button{
-  margin: 0 3px
+  margin: 0 3px;
+  font-size: 12px
 }
 
+
 /* Footer Player */
+
 
 .footer-player{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
-  flex-basis: 30%
 }
 
 .footer-player button{
@@ -461,41 +472,17 @@ aside{
 
 .player-bar{
   flex-basis: 100%;
-  align-items: center
-
-}
-
-.player-bar:hover{
+  align-items: center;
   cursor: pointer;
 }
-
-.player-bar:hover .plain-bar{
-  background-color: #adff2f;
-  cursor: pointer;
-}
-
-.player-bar:hover .plain-bar::after{
-  content: "";
-  width: 12px;
-  height:12px;
-  border-radius: 50%;
-  background-color: #fff;
-  position:absolute;
-  right: -1px;
-  top: -4px;
-  display: block
-}
-
 
 .footer-player span{
   font-size: 10px;
   vertical-align: middle;
-  flex-basis: 10%;
 }
 
 .plain-bar {
   width: 30%;
-
   height: 3px;
   background-color: #fff;
   margin-left: 5px;
@@ -507,62 +494,37 @@ aside{
   height: 3px;
   background-color: #5a5a5a;
   margin-right: 5px;
-
 }
 
 .player-icon{
-  font-size: 16px;
-  margin-bottom: 10px
-}
-
-.play-icon{
-  font-size: 20px;
-  margin-bottom: 10px
-}
-
-.play-icon:hover,
-.player-icon:hover{
+  font-size: 15px;
+  margin-bottom: 10px;
   transform: scale(1.2);
 }
+
+.player-icon.play-icon{
+  font-size: 20px;
+}
+
 
 /* Footee Nav Right */
 
 
 .footer-nav-right{
-  flex-basis: 15%;
+  /* flex-basis: 15%; */
   align-items: center;
   justify-content: flex-end;
-
 }
 
 .footer-nav-right button{
-  margin: 3px 5px
+  margin: 3px 5px;
+  font-size: 12px
 }
 
 .volume-bar{
   flex-basis: 60%;
-  align-items: center
-}
-
-
-.volume-bar:hover{
+  align-items: center;
   cursor: pointer;
-}
-
-.volume-bar:hover .plain-volume{
-  background-color: #adff2f;
-}
-
-.volume-bar:hover .plain-volume::after{
-  content: "";
-  width: 12px;
-  height:12px;
-  border-radius: 50%;
-  background-color: #fff;
-  position:absolute;
-  right: -2px;
-  top: -4px;
-  display: block
 }
 
 .plain-volume{
@@ -582,7 +544,16 @@ aside{
 
 
 
+
+/* ------------------------------------------- */
+
 /* MEDIA QUERY */
+
+/* ------------------------------------------- */
+
+
+
+
 
 /* < 1100 PX */
 /* ------------------------------------- */
@@ -592,71 +563,64 @@ aside{
 
   /* MAIN SCROLL CONTAINER */
 
+
   .album-container{
     flex-wrap: wrap;
-    justify-content: flex-start;
   }
 
   .album{
     flex-basis: calc((100% / 4) - 20px);
   }
 
+
 }
 
-/* < 700 PX */
+
+
+
+
+
+/* < 768 PX */
 /* ------------------------------------- */
 
 @media screen and (max-width: 768px){
 
+
   /* MAIN SCROLL CONTAINER*/
+
 
   /* Top Nav */
 
+
   .top-nav-list{
     flex-wrap: wrap;
-    align-content: space-between;
   }
 
   .top-nav-list li{
     flex-basis: calc((100% / 3) - 10px);
-    flex-shrink: 1
   }
 
   .album{
     flex-basis: calc((100% / 2) - 20px);
   }
 
+
   /* FOOTER */
 
-  /* PLayer */
 
-  .footer-nav-left{
-    flex-basis: 25%
-  }
+/* Footer Player */
+
 
   .footer-player{
-    flex-basis: 50%
+      flex-basis: 50%
 }
 
-  .plain-bar hr{
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin-left: 5px
-  }
-
-  .empty-bar hr{
-    width: 95px;
-    height: 3px;
-    background-color: #5a5a5a;
-    margin-right: 5px
-  }
-
-  .footer-nav-right{
-    flex-basis: 150px
-  }
 
 }
+
+
+
+
 
 
 /* < 600 PX */
@@ -664,56 +628,29 @@ aside{
 
 @media screen and (max-width: 600px){
 
-  /* STRUTTURA DI BASE */
 
-  #main-side-bar{
-    flex-basis: 40px;
-    padding: 0;
-    align-items: center;
-
-  }
-
-  .pop-up{
-    left:40px;
-  }
-
-  .side-section{
-    flex-basis: (100% / 3)
-  }
-
-  /* MAIN */
-
-
-  /* SIDEBAR */
-
-  .command_list li {
-    padding: 8px 0
-  }
-
-  .big-logo{
-    display: none
-  }
-
-  .small-logo{
-    padding-top: 10px;
-    width: 20px;
-    display: inline-block;
-  }
-
-  .profile-pic{
-    width: 20px;
-    margin: 0 5px
-  }
+  /* MIX */
 
 
   .hidden-nav{
     display: none
   }
 
-  #create-a-playlist{
-    display: none
+
+  /* STRUTTURA DI BASE */
+
+
+  #pop-up{
+    left: 40px;
   }
 
+  #main-side-bar{
+    flex-basis: 40px;
+    padding: 0;
+    align-items: center;
+  }
+
+  #create-a-playlist,
   #playlists{
     display: none
   }
@@ -722,20 +659,53 @@ aside{
     text-align: center;
   }
 
+
+  /* SIDEBAR */
+
+
+  /* Logo */
+
+
+  .small-logo{
+    padding-top: 10px;
+    width: 20px;
+    display: inline-block;
+  }
+
+
+  /* Main Nav */
+
+
+  .command-list li {
+    padding: 8px 0
+  }
+
+
+  /* Seziomne Profilo */
+
+
+  .profile-pic{
+    width: 20px;
+    margin: 0 5px
+  }
+
+
   /* FOOTER */
 
+
   /* Footer Nav Left */
+
+
   .player-pic{
     display: none
   }
 
-  /* footer nav right */
-
-  .footer-nav-right{
-    justify-content: flex-end
-  }
 
 }
+
+
+
+
 
 
 /* < 450 PX */
@@ -743,47 +713,60 @@ aside{
 
 @media screen and (max-width: 450px){
 
+
   /* MAIN-SCROLL-CONTAINER */
 
-  .top-nav{
+
+  #top-nav{
     font-size: 11px
   }
 
+
   /* FOOTER */
+
 
   /* Footer Left Nav */
 
+
   .footer-nav-left{
     font-size: 12px;
-    flex-basis: 10%
   }
 
-  /* Player Bar */
+
+  /* Footer Player */
+
+
+  .footer-player{
+    flex-basis: 60%
+  }
 
   .player-icon{
     font-size: 14px;
-    margin-bottom: 10px
   }
 
-  .play-icon{
+  .player-icon.play-icon{
     font-size: 16px;
-    margin-bottom: 10px
   }
 
 
   /* Footer Nav Right */
+
+
   .footer-nav-right{
     flex-wrap: wrap;
-    flex-basis: 18%
+    /* flex-basis: 18% */
   }
 
   .volume-bar{
-    flex-basis: 100%
+    flex-basis: 90%
   }
 
 
-
 }
+
+
+
+
 
 
 /* < 330 PX */
@@ -794,37 +777,47 @@ aside{
 
   /* MAIN SCROLL CONTAINER */
 
+
   /* Top Nav */
 
-  .top-nav{
+
+  #top-nav{
     font-size: 9px
   }
 
+
   /* FOOTER */
+
 
   /* Footer Nav Left */
 
+
   .footer-nav-left button{
-    font-size: 10px
+    font-size: 9px
   }
 
 
   /* Footer Player */
 
-  .player-icon{
-    font-size: 10px;
-    margin-bottom: 10px
+  .footer-player{
+    flex-basis: 70%
   }
 
-  .play-icon{
-    font-size: 12px;
-    margin-bottom: 10px
+  .player-icon{
+    font-size: 10px;
   }
+
+  .player-icon.play-icon{
+    font-size: 12px;
+  }
+
 
   /* Footer Nav Right */
 
+
   .footer-nav-right button{
-    font-size: 10px
+    font-size: 9px
   }
+
 
 }
