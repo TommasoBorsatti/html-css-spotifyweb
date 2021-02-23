@@ -148,7 +148,8 @@ a:hover{
 
 hr{
   margin: 6px 0;
-  width:100%
+  width:100%;
+  background-color: #fff
 }
 
 
@@ -190,7 +191,7 @@ main{
   flex-basis: 150px;
   flex-shrink: 0;
   flex-direction: column;
-  padding:3px 8px 0 8px;
+  padding:3px 10px 0 10px;
 }
 
 .side-section{
@@ -241,6 +242,20 @@ aside{
 
 .command-icon{
   width:18px;
+}
+
+.#main-nav{
+  position: relative
+}
+
+#enhanced::before{
+  content: "";
+  display: inline-block;
+  height: 18px;
+  width: 2px;
+  background-color: #adff2f;
+  position: absolute;
+  left: 0
 }
 
 
