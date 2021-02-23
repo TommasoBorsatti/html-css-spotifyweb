@@ -522,7 +522,7 @@ aside{
 }
 
 .volume-bar{
-  flex-basis: 60%;
+  flex-basis: 50%;
   align-items: center;
   cursor: pointer;
 }
@@ -819,5 +819,24 @@ aside{
     font-size: 9px
   }
 
+
+}
+
+
+
+
+
+
+/* < 500 PX IN ALTEZZA */
+/* ------------------------------------- */
+
+@media screen and (max-height: 500px){
+
+
+  /* POP UP */
+
+  #pop-up{
+    display: none;
+  }
 
 }
