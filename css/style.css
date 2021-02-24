@@ -244,6 +244,16 @@ aside{
   width:18px;
 }
 
+.command-selection:hover.command-selection::before{
+  content: "";
+  display: inline-block;
+  height: 18px;
+  width: 2px;
+  background-color: #adff2f;
+  position: absolute;
+  left: 0
+}
+
 .#main-nav{
   position: relative
 }
